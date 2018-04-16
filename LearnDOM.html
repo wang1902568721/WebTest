@@ -6,36 +6,16 @@
 		<script>
 			window.onload = function()
 			{
-//				document.body.innerHTML='<input id="btn" type="button" value="按钮"/><input type="button" value="按钮"/><input type="button" value="按钮"/>';
-//				var oBtn = document.getElementById("btn");
-//				oBtn.onclick = function()
-//				{
-//					oBtn.style.color="hotpink";
-//				}
-//				var oul = document.getElementById("list");
-//				var oli = oul.getElementsByClassName("select");
-//				//var oli = document.getElementsByClassName("select");
-//				oli[0].style.color="red";
-				var oBtn = document.getElementById("btn");
-				oBtn.onclick = function()
-				{
-					var oUl = document.getElementById("list");
-					var oTxt = document.getElementById("txt");
-					var oli = document.createElement("li");
-					var oLiTxt = document.createTextNode(oTxt.value);
-					
-					oli.appendChild(oLiTxt);
-					oUl.appendChild(oli);
-				}
+				var oInput = document.createElement("input");
+				oInput.id = "submit";
+				oInput.type="button";
+				oInput.value="提交";
+				
+				document.body.appendChild(oInput);
 			}
 		</script>
 	</head>
 	<body>
-		<ul id="list">
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
-		</ul>
-		<input id="txt" type="text" /><input type="button" id="btn" value="插入" />
+		<div id="content"></div>
 	</body>
 </html>
